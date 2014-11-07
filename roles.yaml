@@ -1,0 +1,20 @@
+roles:
+ - dns::openstack
+ - dns::google
+ - files::testfile123
+groups:
+   group1:
+   - station94.redhat.lab
+   - station95.redhat.lab
+   group2:
+   - station95.redhat.lab
+   - station126.vm.islab.russia.local
+   - station96.redhat.lab
+
+dns::openstack:
+ - station94.redhat.lab
+ - station126.vm.islab.russia.local
+ - puppet-client-centos.vm.islab.russia.local 
+files::testfile123:
+ - group1
+ - group2
