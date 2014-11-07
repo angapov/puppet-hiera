@@ -1,0 +1,9 @@
+:hierarchy:
+    - "%{::environment}/nodes/%{::fqdn}"
+    - "%{::environment}/roles"
+    - "%{::environment}/%{::environment}"
+    - common
+:backends:
+    - yaml
+:yaml:
+    :datadir: '/etc/puppet/hiera'
